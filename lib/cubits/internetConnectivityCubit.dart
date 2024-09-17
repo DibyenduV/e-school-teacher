@@ -19,7 +19,7 @@ class InternetConnectivityCubit extends Cubit<InternetConnectivityState> {
     _setUpInternetConnectionChecker();
   }
 
-  StreamSubscription<ConnectivityResult>? _streamSubscription;
+  StreamSubscription<List<ConnectivityResult>>? _streamSubscription;
 
   Future<void> _setUpInternetConnectionChecker() async {
     _streamSubscription = Connectivity()
@@ -28,10 +28,10 @@ class InternetConnectivityCubit extends Cubit<InternetConnectivityState> {
   }
 
   Future<void> _internetConnectionListenerCallback(
-    ConnectivityResult result,
+    List<ConnectivityResult> result,
   ) async {
     //
-    if (result != ConnectivityResult.none) {
+    if (result.contains(ConnectivityResult.none)) {
       final bool hasConnection =
           await InternetConnectionChecker().hasConnection;
 

@@ -2,7 +2,7 @@ import 'package:eschool_teacher/utils/labelKeys.dart';
 
 //database urls
 //Please add your admin panel url here and make sure you do not add '/' at the end of the url
-const String baseUrl = "https://eschool.wrteam.me"; //https://eschool.wrteam.me
+const String baseUrl = "https://7046-14-97-96-194.ngrok-free.app";
 
 const String databaseUrl = "$baseUrl/api/";
 const String storageUrl = "$baseUrl/storage/";
@@ -14,10 +14,10 @@ const Duration errorMessageDisplayDuration = Duration(milliseconds: 3000);
 const String notificationChannelKey = "basic_channel";
 
 //demo mode to disable a few features
-const bool isDemoVersion = false;
+const bool isDemoVersion = true;
 
 //to enable and disable default credentials in login page
-const bool showDefaultCredentials = false;
+const bool showDefaultCredentials = true;
 //default credentials of teacher
 const String defaultTeacherEmail = "teacher@gmail.com";
 const String defaultTeacherPassword = "teacher123";
